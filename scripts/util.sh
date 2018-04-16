@@ -1,7 +1,7 @@
 #!/bin/bash
 
-load_proxy() {
-    if [ -f /vagrant/.proxyrc ]; then 
-        source /vagrant/.proxyrc
+load_rc() {
+    if [ -f /vagrant/.vmrc ]; then 
+        source /vagrant/.vmrc
     fi
 }

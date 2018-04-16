@@ -9,4 +9,4 @@ export DEBIAN_FRONTEND=noninteractive
 
 # allow persistance of 'http_proxy', 'https_proxy', and 'ftp_proxy' env vars 
 # across uses of 'sudo'. 
-echo 'Defaults env_keep = "http_proxy https_proxy ftp_proxy"' >> /etc/sudoers
+echo 'Defaults env_keep = "db_user db_pass db_schema http_proxy https_proxy ftp_proxy"' >> /etc/sudoers

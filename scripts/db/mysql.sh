@@ -2,7 +2,7 @@
 
 source /vagrant/scripts/util.sh 
 
-load_proxy 
+load_rc 
 
 debconf-set-selections <<< "mysql-community-server mysql-community-server/root-pass password vagrant"
 debconf-set-selections <<< "mysql-community-server mysql-community-server/re-root-pass password vagrant"
@@ -13,5 +13,5 @@ sed -i '/bind-address/d' /etc/mysql/mysql.conf.d/mysqld.cnf
 
 service mysql restart
 
-mysql -u root --password="vagrant" --execute="grant all on *.* to 'vagrant'@'%' identified by 'vagrant';
-                                              create database vagrant;"
+mysql -u root --password="vagrant" --execute="grant all privileges on *.* to '$DB_USER'@'%' identified by '$DB_PASS';
+                                              create database $DB_SCHEMA;"
