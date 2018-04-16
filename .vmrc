@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# default database credentials
+export DB_USER="vagrant"
+export DB_PASS="v@grantDB"
+export DB_SCHEMA="vagrantdb"
+
+# export HTTP_PROXY=MY_PROXY_CONN
+# export HTTPS_PROXY=MY_PROXY_CONN
