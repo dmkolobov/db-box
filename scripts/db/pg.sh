@@ -9,9 +9,9 @@ if [ ! -f /etc/apt/sources.list.d/pgdg.list ]; then
 fi
 
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - 
-apt-get update 
+apt-get -q update 
 
-apt-get -y install postgresql-9.6
+apt-get -y -q install postgresql-9.6
 
 sudo -u postgres createdb $DB_SCHEMA 
 sudo -u postgres psql -d $DB_SCHEMA -c "create user $DB_USER with password '$DB_PASS';"
