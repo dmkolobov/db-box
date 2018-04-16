@@ -21,3 +21,6 @@ ACCEPT_EULA="Y" apt-get install -y mssql-tools unixodbc-dev
 /opt/mssql-tools/bin/sqlcmd -U SA -P "$DB_PASS" -Q "create login $DB_USER with password = '$DB_PASS'"
 /opt/mssql-tools/bin/sqlcmd -U SA -P "$DB_PASS" -Q "exec sp_addsrvrolemember @loginame = N'$DB_USER', @rolename = 'sysadmin'"
 /opt/mssql-tools/bin/sqlcmd -U SA -P "$DB_PASS" -Q "create database $DB_SCHEMA"
+
+systemctl stop mssql-server 
+systemctl start mssql-server
