@@ -5,5 +5,5 @@ export DB_USER="vagrant"
 export DB_PASS="v@grantDB"
 export DB_SCHEMA="vagrantdb"
 
-# export HTTP_PROXY=MY_PROXY_CONN
-# export HTTPS_PROXY=MY_PROXY_CONN
+# export http_proxy=my_proxy_string
+# export https_proxoy=my_proxy_string

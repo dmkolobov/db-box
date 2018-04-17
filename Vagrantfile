@@ -4,9 +4,9 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
 
-  config.vm.network "forwarded_port", guest: 1433, host: 1433, auto_correct: true
-  config.vm.network "forwarded_port", guest: 5432, host: 5432, auto_correct: true
-  config.vm.network "forwarded_port", guest: 3306, host: 3306, auto_corrent: true
+  config.vm.network "forwarded_port", guest: 1433, host: 1433, auto_correct: true # Sql Server 2017
+  config.vm.network "forwarded_port", guest: 5432, host: 5432, auto_correct: true # Postgres 9.6
+  config.vm.network "forwarded_port", guest: 3306, host: 3306, auto_corrent: true # MySQL 5.7
 
   config.vm.provider "virtualbox" do |vb|
     # do not display VirtualBox GUI 
